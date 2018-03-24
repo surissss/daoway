@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="http://www.daoway.cn/pcimages/favicon.png">
+    <link rel='stylesheet' href='/css/reset.css' />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/service.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/copyright.css">
+</head>
+<body class="service">
+<%- include('header') %>
+<div class="service_box">
+    <div class="service_wrapper">
+        <h2 class="title">服务商</h2>
+        <div class="content">
+            <div class="left">
+                <ul class="list">
+
+                    <% for(var i in result){%>
+
+                    <li class="item">
+                        <a href="/seller">
+                            <img class="seller_img" src=<%= result[i].imgUrl%> >
+                            <div class="seller_name">
+                                <img src="/img/service/home1.png">
+                                <span> <%= result[i].result %> </span>
+                            </div>
+                            <div class="seller_order">
+                                <span>已接单<%= result[i].orderCount %>单</span>
+                                <span>好评<%= result[i].positiveRate %></span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <% } %>
+
+                </ul>
+            </div>
+            <div class="right">
+                <img src="/img/service/tuijianfuwushang_03.jpg">
+                <div class="download_bg">
+                    <img src="/img/service/daowayApp.png">
+                </div>
+            </div>
+        </div>
+        <div class="more_button">
+            <div class="button_wrapper">
+                <span>查看更多商家</span>
+                <img src="/img/service/fuwu_down2.jpg" alt="">
+            </div>
+        </div>    
+    </div>
+</div>
+<%- include('footer') %>
+<%- include('copyright') %>
+<script src="/lib/jquery-1.10.1.js"></script>
+<script>
+    $(function () {
+
+    })
+</script>
+</body>
+</html>

@@ -2,11 +2,61 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="shortcut icon" href="http://www.daoway.cn/pcimages/favicon.png">
+    <link rel="stylesheet" href="/lib/swiper.min.css">
     <link rel='stylesheet' href='/css/reset.css' />
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/lunbo.css">
+    <link rel="stylesheet" href="/css/item_box.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/partner.css">
+    <link rel="stylesheet" href="/css/copyright.css">
   </head>
   <body class="msite">
-  <%- include('header') %>
+    <%- include('header') %>
+    <%- include('lunbo') %>
+
+    <%- include('item_box') %>
+
+
+    <%- include('footer') %>
+    <%- include('partner') %>
+    <%- include('copyright') %>
+  <script src="/lib/jquery-1.10.1.js"></script>
+  <script src="/lib/swiper.min.js"></script>
+  <script>
+    $(function () {
+      const swiper = new Swiper('.swiper-container', {
+        autoplay:{
+          delay:5000,
+          disableOnInteraction: false
+        },
+        loop:true,
+        spaceBetween: 30,
+        effect: 'fade',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+
+      //2. 鼠标移动切换二级导航菜单的切换显示和隐藏
+      subMenu()
+      function subMenu() {
+        $('.first_menu li').hover(function () {
+          $(this).children('.second_menu').show()
+          $(this).find('.first_menu_item img').attr('src','/img/msite/icon1.png').addClass('on')
+        }, function () {
+          $(this).children('.second_menu').hide()
+          $(this).find('.first_menu_item img').attr('src','/img/msite/right.png').removeClass('on')
+        })
+      }
+    })
+  </script>
   </body>
 </html>

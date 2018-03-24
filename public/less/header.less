@@ -1,11 +1,60 @@
 .header{
-  width: 90%;
-  height: 65px;
-  max-width: 1200px;
-  margin: 0 auto;
-  .header_wrapper{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
+  background-color: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid #e5e5e5;
+  .header_box{
+    max-width: 1200px;
+    min-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 5px auto;
+    .header_wrapper{
+      width: 100%;
+      height: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .address{
+        img{
+          position: relative;
+          top: 3px;
+        }
+        .city{
+          font-weight: bold;
+          color: #121212;
+          white-space: nowrap;
+        }
+        a:hover{
+          color: #e94840;;
+        }
+      }
+      .content{
+        ul{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          li{
+            padding:10px 15px;
+            a{
+              font-weight: bold;
+              color:#121212;
+              &:hover{
+                color: #e94840;
+              }
+              &.login{
+                background-color: #e94840;
+                color: #ffffff;
+                border-radius: 3px;
+                display: block;
+                padding: 5px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
   }
 }

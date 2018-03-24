@@ -1,0 +1,110 @@
+.service{
+  width: 100%;
+  background-color: #fbf8f8;
+  .service_box{
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    .service_wrapper{
+      padding-bottom: 50px;
+      .title{
+        line-height: 85px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .content{
+        display: flex;
+        .left{
+          width: 970px;
+          .list{
+            display: flex;
+            flex-wrap: wrap;
+            .item{
+              width: 232px;
+              height: 300px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+              a{
+                background-color: #ffffff;
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #eaeaea;
+                box-sizing: border-box;
+                padding: 10px;
+                &:hover{
+                  box-shadow: 5px 5px 10px #c0c0c0;
+                }
+                .seller_img{
+                  width: 100%;
+                  display:block;
+                }
+                .seller_name{
+                  margin-top: 15px;
+                  height: 26px;
+                  line-height: 26px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  img{
+                    width: 18px;
+                    height: 17px;
+                    vertical-align: middle;
+                    margin-bottom: 5px;
+                    margin-right: 3px;
+                  }
+                  span{
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 700;
+
+                  }
+                }
+                .seller_order{
+                  display: flex;
+                  justify-content: space-between;
+                  height: 26px;
+                  line-height: 26px;
+                  font-size: 12px;
+                  color: #929292;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+          }
+        }
+        .right{
+          width: 230px;
+          .download_bg{
+            height: 290px;
+            margin-top: 10px;
+            background: url("/img/service/tuijianfuwushang_06.jpg") no-repeat;
+            img{
+              width: 130px;
+              height: 130px;
+              margin: 50px 0 0 50px;
+            }
+          }
+        }
+      }
+      .more_button{
+        height: 152px;
+        text-align: center;
+        .button_wrapper{
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          border: 1px solid #e5e5e5;
+          border-radius: 5px;
+          margin: 50px 5px;
+          background: #fff;
+          display: inline-block;
+          font-size: 16px;
+          color: #b1b1b1;
+        }
+      }
+    }
+  }
+}

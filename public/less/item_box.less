@@ -1,0 +1,119 @@
+.item1_box{
+  width: 100%;
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  .item1_wrapper{
+    height: 446px;
+    padding: 50px 0 20px;
+    .navigation{
+      .service_type{
+        height: 31px;
+        font-family: "Microsoft YaHei";
+        font-size: 28px;
+        font-weight: bold;
+        color: #3d3838;
+        text-align: center;
+      }
+      .service_name{
+        height: 25px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        li{
+          a{
+            font-size: 22px;
+            font-family: "幼圆";
+            color: #3d3838;
+            margin: auto 5px;
+            &:hover{
+              color: #e94840;
+            }
+          }
+        }
+
+      }
+      .more_service{
+        float: right;
+        margin-top: -23px;
+        font-size: 18px;
+        font-family: "幼圆";
+        color: #3d3838;
+        &:hover{
+          color: #e94840;
+        }
+      }
+    }
+    .servicetags{
+      margin-top: 30px;
+      height: 345px;
+      .service_content{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .service_item{
+          display: block;
+          box-sizing: border-box;
+          width: 230px;
+          padding: 10px;
+          border: 1px solid #eaeaea;
+          &:hover{
+            box-shadow: 5px 5px 10px #dfdfdf;
+          }
+          .item_content{
+            .item_img{
+              img{
+                width: 100%;
+                display: block;
+              }
+            }
+            .item_name{
+              padding-top: 10px;
+              font-size: 16px;
+              font-weight: 800;
+              color: #000;
+              height: 18px;
+            }
+            .item_note{
+              color: #929292;
+              padding: 5px 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              word-break: break-all;
+              font-size: 13px;
+              line-height: 18px;
+              height: 58px;
+            }
+            .item_detail{
+              color: #e94840;
+              font-size: 14px;
+              .item_price{
+                font-size: 20px;
+                font-weight: bold;
+              }
+              .price_unit{
+                font-weight: bold;
+              }
+              .detail_button{
+                position: relative;
+                top: -5px;
+                left: 50px;
+                display: inline-block;
+                width: 76px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                background: #fb474f;
+                border-radius: 5px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

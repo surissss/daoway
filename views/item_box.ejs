@@ -1,0 +1,40 @@
+<div class="item1_box">
+
+  <% for(var i in result ) {
+    const serviceType =result[i].serviceType
+    const shopList = result[i].shopList
+  %>
+  <div class="item1_wrapper">
+    <div class="navigation">
+      <div class="service_type"><%= result[i].serviceIndex%></div>
+      <ul class="service_name">
+
+        <% for(var j=0; j<serviceType.length; j++){ %>
+          <li><a href="javascript:;"><%= serviceType[j] %></a></li>
+        <% } %>
+
+      </ul>
+      <a class="more_service" href="javascript:;">更多服务></a>
+    </div>
+    <div class="servicetags">
+      <div class="service_content">
+        <% for(var j=0; j<shopList.length; j++) { %>
+
+        <a class="service_item" href="javascript:;">
+          <div class="item_content">
+            <div class="item_img"><img src="<%= shopList[j].imgUrl %>"></div>
+            <div class="item_name"><%= shopList[j].serviceName %></div>
+            <div class="item_note"><%= shopList[j].description %></div>
+            <div class="item_detail">
+              <span class="item_price"><%= shopList[j].price %></span>
+              <span class="price_unit">元/小时</span>
+              <span class="detail_button">查看详情</span>
+            </div>
+          </div>
+        </a>
+       <% } %>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
